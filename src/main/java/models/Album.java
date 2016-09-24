@@ -59,7 +59,7 @@ public class Album {
         this.genres = genres;
     }
     
-    public void addGenre(String genre) {
+    public void addGenre(String genre){
         genres.add(genre);
     }
 }
