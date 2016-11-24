@@ -1,7 +1,13 @@
 package models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 public class Song {
-    private int songId;
+    @Id
+    @GeneratedValue
+    private Long id;
+
     private String songTitle;
     private short trackNumber;
     private short trackLength;
@@ -21,8 +27,8 @@ public class Song {
         this.trackPath = trackPath;
     }
 
-    public int getSongId() {
-        return songId;
+    public Long getSongId() {
+        return id;
     }
 
     public String getSongTitle() {

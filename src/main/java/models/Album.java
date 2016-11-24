@@ -1,12 +1,21 @@
 package models;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
 public class Album {
-    private int albumId;
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
     private String albumTitle;
     private short albumYear;
+
+    @ManyToMany
     private Band band;
+
     private ArrayList<String> genres;
     
     /*
@@ -23,8 +32,8 @@ public class Album {
         this.genres = genres;
     }
 
-    public int getAlbumId() {
-        return albumId;
+    public Long getAlbumId() {
+        return id;
     }
 
     public String getAlbumTitle() {

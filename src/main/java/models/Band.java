@@ -1,9 +1,18 @@
 package models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.ArrayList;
+import javax.persistence.Entity;
 
+@Entity
 public class Band {
-    private int bandId;
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    //need albums?
     private ArrayList<String> musicians;
     private String bandName;
 
@@ -31,7 +40,7 @@ public class Band {
     }
 
     public int getBandId() {
-        return bandId;
+        return id;
     }
 
 }
