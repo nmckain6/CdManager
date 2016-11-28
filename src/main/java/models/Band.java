@@ -12,8 +12,7 @@ public class Band {
     @GeneratedValue
     private Long id;
 
-    //need albums?
-    private ArrayList<String> musicians;
+    private ArrayList<Album> albums;
     private String bandName;
 
     /*
@@ -23,12 +22,12 @@ public class Band {
 
     }
 
-    public ArrayList<String> getMusicians() {
-        return musicians;
+    public ArrayList<Album> getAlbums() {
+        return albums;
     }
 
-    public void setMusicians(ArrayList<String> musicians) {
-        this.musicians = musicians;
+    public void setAlbums(ArrayList<String> musicians) {
+        this.albums = albums;
     }
 
     public String getBandName() {
@@ -39,7 +38,7 @@ public class Band {
         this.bandName = bandName;
     }
 
-    public int getBandId() {
+    public Long getBandId() {
         return id;
     }
 
